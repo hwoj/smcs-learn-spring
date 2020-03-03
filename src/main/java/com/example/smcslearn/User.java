@@ -1,5 +1,8 @@
 package com.example.smcslearn;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+
 public class User {
     private int id;
     private String email;
