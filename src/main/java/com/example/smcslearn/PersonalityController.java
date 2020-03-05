@@ -1,18 +1,20 @@
 package com.example.smcslearn;
 
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
-
 @RestController
 public class PersonalityController {
+
     @GetMapping("/personality")
+    @CrossOrigin("http://localhost:4200")
     public Question[] personalityQuestions(){
         Question[] questions = new Question[32];
-        questions[0] = new Question("Do you trust information after hearing from one source");
+        questions[0] = new Question("Do you trust information after hearing from one source?");
         questions[1] = new Question("Do you get easily upset during conversations with others who contradict your views?");
         questions[2] = new Question("Do you change your mind easily if you were wrong?");
         questions[3] = new Question("Do you get upset at those who use insults as arguments in their favour?");
@@ -28,14 +30,14 @@ public class PersonalityController {
         questions[13] = new Question("Do you like to reflect on your experiences?");
         questions[14] = new Question("Do you like being the centre of attention?");
         questions[15] = new Question("Do you usually get noticed right away in class?");
-        questions[16] = new Question("Are you not interested in other people's problems");
-        questions[17] = new Question("Are you concerned about others");
-        questions[18] = new Question("Do you use others for your own ends");
-        questions[19] = new Question("Do you try not to think about the needy");
-        questions[20] = new Question("Are you indifferent to the feelings of others");
-        questions[21] = new Question("Do you obstruct others' plans");
-        questions[22] = new Question("Do you boast about my virtues");
-        questions[23] = new Question("Do you think you are better then others");
+        questions[16] = new Question("Are you not interested in other people's problems?");
+        questions[17] = new Question("Are you concerned about others?");
+        questions[18] = new Question("Do you use others for your own ends?");
+        questions[19] = new Question("Do you try not to think about the needy?");
+        questions[20] = new Question("Are you indifferent to the feelings of others?");
+        questions[21] = new Question("Do you obstruct others' plans?");
+        questions[22] = new Question("Do you boast about my virtues?");
+        questions[23] = new Question("Do you think you are better then others?");
         questions[24] = new Question("Do you have an academic goal in mind?");
         questions[25] = new Question("Do you try to complete all your homework?");
         questions[26] = new Question("Do you go in for extra help?");
