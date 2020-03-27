@@ -1,5 +1,9 @@
 package com.example.smcslearn;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+
+
 public class Chapter {
     private int id;
     private String title;

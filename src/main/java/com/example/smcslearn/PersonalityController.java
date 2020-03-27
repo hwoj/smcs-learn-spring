@@ -1,9 +1,8 @@
 package com.example.smcslearn;
 
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,5 +50,10 @@ public class PersonalityController {
         // 16-23 as agreeableness and the rest for eagerness to learn
 
         return questions;
+    }
+    RestTemplate restTemplate;
+    @PostMapping(path = "/personality",consumes = "application/json", produces = "application/json")
+    public void receiveAnswers(@RequestBody String[] answers){
+
     }
 }
